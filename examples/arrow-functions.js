@@ -1,34 +1,35 @@
 function helloA() {
-	return "Hello";
+  return 'Hello';
 }
 // becomes
-const helloB = () => "Hello";
+const helloB = () => 'Hello';
 
 console.log(helloA());
 console.log(helloB());
 
 // larger function blocks are ok
 const helloC = (name) => {
-	if (typeof name !== "undefined") {
-		return "Hello " + name;
-	}
-	return "Hello anon";
-}
+  if (typeof name !== 'undefined') {
+    return 'Hello ' + name;
+  }
+  return 'Hello anon';
+};
 
 console.log(helloC());
-console.log(helloC("Ryan"));
+console.log(helloC('Ryan'));
 
 // But: no arguments!
 
 function testFunctionPropertiesA() {
-	console.log(arguments);
-	console.log(this);
+  console.log(arguments);
+  console.log(this); // Warning: this changes depending on context
 }
 testFunctionPropertiesA();
+
 const testFunctionPropertiesB = () => {
-	//console.log(arguments); // ReferenceError!
-	console.log(this);
-}
+  // console.log(arguments); // ReferenceError!
+  console.log(this); // Warning: this is the global object!
+};
 
 testFunctionPropertiesB();
 

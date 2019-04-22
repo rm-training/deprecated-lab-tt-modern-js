@@ -6,11 +6,9 @@ const robot = {
 	},
 };
 
-// when left value is an array
-// and right value is an array
 // the right will be desctructured into the left
 var { name: robotName } = robot;
-console.log(robotName);
+console.log("Example 1:", robotName);
 
 // you must use var/let/const
 // or ()
@@ -21,23 +19,23 @@ console.log(robotName);
 // solution: wrap the whole thing in parenthesis
 // or use var/let/const
 ({ name: robotName } = robot);
-console.log(robotName);
+console.log("Example 2:", robotName);
 
 // you can use the same prop name/var names for convenience
 var { name, id } = robot;
-console.log(name, id);
+console.log("Example 3:", name, id);
 
 // You can use defaults
 var { otherThingy: robotThingy = "Default Robot" } = robot;
-console.log(robotThingy);
+console.log("Example 4:", robotThingy);
 
 var { x = 5 } = {};
-console.log(x); // 5!
+console.log("Example 5:", x); // 5!
 
 // Use them in function args to pass object params
 // as named function arguments
 function initConfig({ setupFn, afterSetupFn, loggerId }) {
-	console.log(setupFn, afterSetupFn, loggerId);
+	console.log("Example 6:", setupFn, afterSetupFn, loggerId);
 }
 initConfig({
 	setupFn: () => { },
@@ -56,4 +54,4 @@ function returner() {
 }
 
 var { other } = returner();
-console.log(other);
+console.log("Example 7:", other);

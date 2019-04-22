@@ -1,5 +1,6 @@
 function adder() {
 	// prior to es2015....
+	// we'd convert arguments, which is array-like, to a real array
 	var args = Array.prototype.slice.call(arguments);
 
 	console.log(args);
