@@ -1,0 +1,18 @@
+{
+  "name": "targeted-topics-modern",
+  "version": "1.0.0",
+  "description": "Targeted Topics - Modern JS",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "with-modules": "node -r esm"
+  },
+  "author": "Ryan Morris",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.22"
+  }
+}
