@@ -8,7 +8,7 @@ const cat = {
   age: 10,
   // by setting this up
   // we can loop over this object
-  * [Symbol.iterator]() {
+  *[Symbol.iterator]() {
     let { age } = this;
     while (age > 0) {
       yield age;
@@ -24,16 +24,16 @@ for (const age of cat) {
 
 // Practical example:
 // support for..of with objects
-const dog = {
-  name: 'Fido',
-  legs: 4,
-  * [Symbol.iterator]() {
-    for (const prop in this) {
-      yield this[prop];
-    }
-  },
-};
+// const dog = {
+//   name: 'Fido',
+//   legs: 4,
+//   * [Symbol.iterator]() {
+//     for (const prop in this) {
+//       yield this[prop];
+//     }
+//   },
+// };
 
-for (const val of dog) {
-  console.log(val);
-}
+// for (const val of dog) {
+//   console.log(val);
+// }

@@ -49,9 +49,9 @@ console.assert(squareThing instanceof Rectangle);
 // And modify it so that it doesn't need to use 'bind', 'call' or retain context
 
 Shape.prototype.moveLater = function (x, y, ms) {
-  setTimeout(function () {
+  setTimeout(() => {
     this.move(x, y);
-  }.bind(this), ms);
+  }, ms);
 }
 
 console.assert(typeof shapeThing.moveLater === 'function');

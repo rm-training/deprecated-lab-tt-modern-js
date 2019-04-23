@@ -17,13 +17,18 @@ for (let prop in obj1) {
 
 console.log('Cloned:', target, obj1);
 
-// // cloning...
-// const clonedObj1 = Object.assign({}, obj1);
-// console.log('Cloned with assign', clonedObj1);
+// cloning...
+const clonedObj1 = Object.assign({}, obj1);
+console.log('Cloned with assign', clonedObj1);
 
 // // Example usage
 // // merging...
-// Object.assign(obj1, {
-// 	id: 10,
-// });
-// console.log('Merged with assign', obj1);
+Object.assign(obj1, {
+	id: 10,
+});
+console.log('Merged with assign', obj1);
+
+// merging all 4 into obj1
+Object.assign({}, obj1, obj2, obj3, obj4);
+
+

@@ -3,6 +3,11 @@ function helloA() {
 }
 
 // concise, implied return
+const helloB = (...args) => {
+  console.log(args);
+}
+
+helloB(1, 2, 3, 4, 5);
 
 // a bit further
 

@@ -21,5 +21,8 @@ console.log('Example 2:', a, b);
 console.log('Example 3:', a, fun);
 
 // Neat: This can be used to swap a variable value
+var a = 10;
+var b = 12;
+
 [a, b] = [b, a];
 console.log('Example 4:', a, b);

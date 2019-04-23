@@ -2,18 +2,17 @@
 // We only had Function Scope
 
 // these vars are globally scoped
-var x = 5;
-var y = 10;
+let x = 5;
+let y = 10;
 
 function hello(y) {
 	// this var is function scoped
-	var z = 13;
+	const z = 13;
 	console.log('X is', x);
 	console.log('Y is', y);
 
 	if (y > x) {
-		// @todo this var is...?
-		var z = 12;
+		const z = 12;
 		console.log('Z is', z);
 	}
 	console.log('Z is now', z);
@@ -23,4 +22,8 @@ hello(33);
 
 // in a browser... without 'strict mode'
 // this would output...?
-console.log(window.x);
+var x;
+// warning: do not use this, buggy side-effect
+// let & const do not do this
+console.log(window.x); // only in the browser
+console.log(x);

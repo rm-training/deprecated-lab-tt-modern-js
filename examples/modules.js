@@ -13,13 +13,13 @@ import DefaultAnimal from './modules/Animal.js';
 import { Animal } from './modules/Animal.js';
 
 // importing more than one thing
-// import { Animal, somePublicJunk } from './modules/Animal.js';
+//import { Animal, somePublicJunk } from './modules/Animal.js';
 
 // aliasing
-// import { Animal as MyOwnAnimal } from './modules/Animal.js';
+//import { Animal as MyOwnAnimal } from './modules/Animal.js';
 
 // importing everything
-// import * as AnimalModule from './modules/Animal.js';
+//import * as AnimalModule from './modules/Animal.js';
 
 // from here down we can just use our imports as we normally would...
 

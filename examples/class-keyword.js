@@ -6,18 +6,21 @@
 //
 
 // our "class" and "constructor" rolled into one
-function Animal(name, sound, has_tail, num_legs) {
-  // setting instance-level properties
-  this.name = name;
-  this.sound = sound;
-  this.has_tail = has_tail;
-  this.num_legs = num_legs;
-}
+class Animal {
 
-// this is a shared method every instance will have access to
-Animal.prototype.speak = function () {
-  return `${this.name} says: ${this.sound}`;
-};
+  constructor(name, sound, has_tail, num_legs) {
+    // setting instance-level properties
+    this.name = name;
+    this.sound = sound;
+    this.has_tail = has_tail;
+    this.num_legs = num_legs;
+  }
+
+  speak() {
+    return `${this.name} says: ${this.sound}`;
+  }
+
+}
 
 // create instances using the 'new' keyword
 const cat = new Animal('Felix', 'meow', true, 4);
@@ -25,11 +28,12 @@ const cat = new Animal('Felix', 'meow', true, 4);
 console.log(cat.speak());
 
 // if we want sub-classes here
-function Dog(name) {
-  Animal.call(this, name, 'Bark', true, 4);
+class Dog extends Animal {
+  constructor(name) {
+    super(name, 'Bark', true, 4);
+  }
 }
 
-Dog.prototype = Object.create(Animal.prototype);
 const doggy = new Dog('Fido');
 
 console.log(doggy.speak());

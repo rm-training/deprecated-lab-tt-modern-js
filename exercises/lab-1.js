@@ -13,6 +13,7 @@ let thing1 = 'apple';
 let thing2 = 'banana';
 
 // ...solution goes here...
+[thing1, thing2] = [thing2, thing1];
 
 console.assert(thing2 === 'apple', 'Thing2 should now reference the original value of thing1');
 console.assert(thing1 === 'banana', 'Thing1 should now reference the original value of thing2');
@@ -22,9 +23,12 @@ console.assert(thing1 === 'banana', 'Thing1 should now reference the original va
 // Given an object, in one line, assign the keys as variables that reference their corresponding values within the object
 // console.log(name) => 'elvis'
 // console.log(title) => 'hip swinger'
-const elvis = { name: 'elvis', title: 'hip swinger' }
+const elvis = {
+	name: 'elvis',
+	title: 'hip swinger'
+}
 
-// ...solution goes here...
+let { name, title } = elvis;
 
 console.assert(name === elvis.name);
 console.assert(title === elvis.title);
@@ -35,7 +39,10 @@ console.assert(title === elvis.title);
 // console.log(person) => 'elvis'
 // console.log(job) => 'hip swinger'
 
-// ...solution goes here...
+let {
+	name: person,
+	title: job
+} = elvis;
 
 console.assert(person === elvis.name);
 console.assert(job === elvis.title);
@@ -49,7 +56,7 @@ const numbers = [1, 2, 3]
 const letters = ['a', 'b', 'c']
 const foods = ['bacon', 'mango', 'pecan pie']
 
-// ... solution goes here ...
+let newArray = [...numbers, ...letters, ...foods];
 
 console.assert(newArray.length === 9);
 
@@ -60,14 +67,14 @@ console.assert(newArray.length === 9);
 
 const someWord = 'mcGoo'
 
-// ...solution goes here...
+let wordArray = [...someWord];
 
 console.assert(JSON.stringify(wordArray) === JSON.stringify(['m', 'c', 'G', 'o', 'o']));
 
 // Exercise 6
 //
 // Convert the following function into an arrow function:
-function sayHello(name) {
+const sayHello = (name) => {
 	return 'Hello, ' + name;
 }
 

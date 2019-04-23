@@ -17,9 +17,10 @@ ryan.sayHello();
 // @todo - what happens if we run some asynchronous code?
 // which, remember, can be run in another context...
 Human.prototype.sayHelloLater = function () {
+  // "this" in this case is locked in to Human's instances
   setTimeout(function () {
     this.sayHello();
-  }, 1000);
+  }.bind(this), 1000);
 
   // in the past we might try to retain context by...
   // 	var that = this;

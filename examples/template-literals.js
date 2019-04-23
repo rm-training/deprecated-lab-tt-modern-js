@@ -2,7 +2,7 @@ const name = 'Abe';
 const age = 101;
 
 console.log(
-  name + ' is ' + age + ' years old'
+  `${name} is ${age} years old`
 );
 
 // We can also run our strings through a function
