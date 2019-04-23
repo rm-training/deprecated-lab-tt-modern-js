@@ -1,3 +1,6 @@
+const somePrivateJunk = 10;
+const somePublicJunk = 5;
+
 class Animal {
   constructor(name, sound, has_tail, num_legs) {
     this.name = name;
@@ -23,7 +26,10 @@ class Animal {
 export { Animal };
 
 // export multiple things
-// export { Animal, otherFn }
+// export { Animal, somePublicJunk };
+
+// export and alias
+// export { Animal as SuperAnimal };
 
 // setting a default export (only one per module)
 export default Animal;

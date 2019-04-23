@@ -13,7 +13,7 @@ import DefaultAnimal from './modules/Animal.js';
 import { Animal } from './modules/Animal.js';
 
 // importing more than one thing
-// import { Animal, otherFn } from './modules/Animal.js';
+// import { Animal, somePublicJunk } from './modules/Animal.js';
 
 // aliasing
 // import { Animal as MyOwnAnimal } from './modules/Animal.js';
