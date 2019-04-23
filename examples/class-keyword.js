@@ -1,6 +1,9 @@
 // Prior to the class keyword
 // we would define constructor functions
 // to help create objects that relate to one another in an OO-ish way
+//
+// Animal -> animal instances
+//
 
 // our "class" and "constructor" rolled into one
 function Animal(name, sound, has_tail, num_legs) {
@@ -20,24 +23,3 @@ Animal.prototype.speak = function () {
 const cat = new Animal('Felix', 'meow', true, 4);
 
 console.log(cat.speak());
-
-//
-// When re-written to class keyword
-//
-
-// class AnimalAsAClass {
-// 	constructor(name, sound, has_tail, num_legs) {
-// 		this.name = name;
-// 		this.sound = sound;
-// 		this.has_tail = has_tail;
-// 		this.num_legs = num_legs;
-// 	}
-
-// 	speak() {
-// 		return this.name + ' says: ' + this.sound;
-// 	}
-// }
-
-// var cat = new AnimalAsAClass('Felix', 'meow', true, 4);
-
-// console.log(cat.speak());

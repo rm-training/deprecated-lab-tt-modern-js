@@ -1,4 +1,10 @@
-const arr1 = ['a', 2, () => 10, 'leftovers'];
+// given an array
+const arr1 = [
+  'a',
+  2,
+  () => 10,
+  'leftovers'
+];
 
 // when left and right are [] arrays
 // the right will be destructured into the left

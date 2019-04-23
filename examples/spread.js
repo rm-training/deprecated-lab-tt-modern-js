@@ -25,6 +25,10 @@ console.log('Sum result:', result);
 // const combinedArr = [...arr1, "middle", ...arr2];
 // console.log('Combined array:', combinedArr);
 
+// // Example use case
+// // copying an array
+//const arr3 = [...arr1];
+
 // // And works with Objects as of ES2018
 // const obj1 = { name: 'Jim' };
 // const obj2 = { age: 50 };
