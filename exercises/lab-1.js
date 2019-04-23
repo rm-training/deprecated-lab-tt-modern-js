@@ -53,7 +53,6 @@ const foods = ['bacon', 'mango', 'pecan pie']
 
 console.assert(newArray.length === 9);
 
-
 // Exercise 5
 //
 // Split the following string into an array using es6:
@@ -72,27 +71,26 @@ function sayHello(name) {
 	return 'Hello, ' + name;
 }
 
+// ...solution goes here...
+
 console.assert(sayHello('natalie') === 'Hello, natalie');
 
 // Exercise 7
 //
-// Convert the following to ES6
-// use classes instead of object.prototype...
+// Convert the following class definition
+// to use the class keyword instead of object.prototype...
 // class, constructor, super
 
-// our constructor
 function Shape(id, x, y) {
 	this.id = id;
 	this.move(x, y);
 }
 
-// an instance method
 Shape.prototype.move = function (x, y) {
 	this.x = x;
 	this.y = y;
 }
 
-// a static method
 Shape.checkType = function (shape) {
 	if (shape.width === shape.height) {
 		return 'square';
@@ -100,7 +98,6 @@ Shape.checkType = function (shape) {
 	return 'shape';
 }
 
-// a child constructor
 function Rectangle(id, x, y, width) {
 	Shape.call(this, id, x, y);
 	this.width = width;
@@ -115,10 +112,9 @@ Rectangle.prototype.changeWidth = function (width) {
 	this.height = width;
 }
 
-// tests
+// tests...
 const shapeThing = new Shape(4, 50, 50);
 const squareThing = new Rectangle(5, 12, 15, 30);
-
 console.assert(shapeThing instanceof Shape);
 console.assert(squareThing instanceof Rectangle);
 
@@ -127,6 +123,7 @@ console.assert(squareThing instanceof Rectangle);
 // There is an additional method on all shapes
 // Make sure this is added into your class definition (above)
 // And modify it so that it doesn't need to use 'bind', 'call' or retain context
+// hint: we're talking arrow functions
 
 Shape.prototype.moveLater = function (x, y, ms) {
 	// notice we're using bind() to maintain context
@@ -135,6 +132,7 @@ Shape.prototype.moveLater = function (x, y, ms) {
 	}.bind(this), ms);
 }
 
+// tests...
 console.assert(typeof shapeThing.moveLater === 'function');
 shapeThing.moveLater(100, 100, 1);
 setTimeout(function () {
