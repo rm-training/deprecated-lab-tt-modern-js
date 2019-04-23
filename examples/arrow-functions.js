@@ -1,36 +1,14 @@
 function helloA() {
   return 'Hello';
 }
-// becomes
-const helloB = () => 'Hello';
 
-console.log(helloA());
-console.log(helloB());
+// concise, implied return
 
-// larger function blocks are ok
-const helloC = (name) => {
-  if (typeof name !== 'undefined') {
-    return 'Hello ' + name;
-  }
-  return 'Hello anon';
-};
+// a bit further
 
-console.log(helloC());
-console.log(helloC('Ryan'));
+// no `arguments`
 
-// But: no arguments!
+// no `this`
 
-function testFunctionPropertiesA() {
-  console.log(arguments);
-  console.log(this); // Warning: this changes depending on context
-}
-testFunctionPropertiesA();
-
-const testFunctionPropertiesB = () => {
-  // console.log(arguments); // ReferenceError!
-  console.log(this); // Warning: this is the global object!
-};
-
-testFunctionPropertiesB();
-
-// they are mostly special because of lexically bound 'this' (context)
+// they are primarily special
+// because of lexically bound 'this' (context)
