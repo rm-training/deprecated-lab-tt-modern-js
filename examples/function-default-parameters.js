@@ -14,11 +14,17 @@ saySomething('Ryan', 'Hello');
 //
 // You can use functions to set defaults, too
 //
-function getter() {
-  return 25;
-}
-function testFunction(x = getter()) {
-  console.log('X is', x);
-}
-testFunction();
-testFunction(5);
+// function getter() {
+//   return 25;
+// }
+// function testFunction(x = getter()) {
+//   console.log('X is', x);
+// }
+// testFunction();
+// testFunction(5);
+
+// Default values can reference previously
+// declared arguments, too
+// function testMe(x=10, y=x+2) {
+//   console.log(x, y);
+// }
