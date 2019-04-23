@@ -1,10 +1,6 @@
 // How we'd define a function and set defaults
 // prior to es6+
-function saySomething(name, words) {
-  // using typeof checks to compare it against undefined
-  name = typeof name === 'undefined' ? 'Anon' : name;
-  words = typeof words === 'undefined' ? 'nothing' : words;
-
+function saySomething(name = 'Anon', words = 'nothing') {
   console.log(`${name} says: ${words}`);
 }
 
