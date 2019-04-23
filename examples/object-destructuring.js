@@ -1,3 +1,4 @@
+// given an object
 const robot = {
 	id: 5,
 	name: 'Robot',
@@ -7,8 +8,8 @@ const robot = {
 };
 
 // the right will be desctructured into the left
-var { name: robotName } = robot;
-console.log("Example 1:", robotName);
+let { name: robotName } = robot;
+console.log("Example 1, robotName:", robotName);
 
 // you must use var/let/const
 // or ()
@@ -19,17 +20,17 @@ console.log("Example 1:", robotName);
 // solution: wrap the whole thing in parenthesis
 // or use var/let/const
 ({ name: robotName } = robot);
-console.log("Example 2:", robotName);
+console.log("Example 2, wrapped:", robotName);
 
 // you can use the same prop name/var names for convenience
-var { name, id } = robot;
-console.log("Example 3:", name, id);
+let { name, id } = robot;
+console.log("Example 3, same prop names:", name, id);
 
 // You can use defaults
-var { otherThingy: robotThingy = "Default Robot" } = robot;
-console.log("Example 4:", robotThingy);
+let { otherThingy: robotThingy = "Default Robot" } = robot;
+console.log("Example 4, with Default:", robotThingy);
 
-var { x = 5 } = {};
+let { x = 5 } = {};
 console.log("Example 5:", x); // 5!
 
 // Use them in function args to pass object params
@@ -53,5 +54,5 @@ function returner() {
 	}
 }
 
-var { other } = returner();
+let { other } = returner();
 console.log("Example 7:", other);
