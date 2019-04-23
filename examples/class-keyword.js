@@ -23,3 +23,13 @@ Animal.prototype.speak = function () {
 const cat = new Animal('Felix', 'meow', true, 4);
 
 console.log(cat.speak());
+
+// if we want sub-classes here
+function Dog(name) {
+  Animal.call(this, name, 'Bark', true, 4);
+}
+
+Dog.prototype = Object.create(Animal.prototype);
+const doggy = new Dog('Fido');
+
+console.log(doggy.speak());
