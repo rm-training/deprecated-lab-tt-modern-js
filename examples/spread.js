@@ -8,7 +8,7 @@ const numbers = [1, 2, 3];
 let result;
 
 // it unwraps/extracts the values
-result = sum(numbers[0], numbers[1], numbers[2]);
+result = sum(...numbers);
 console.log('Sum result:', result);
 
 // // Spread unwraps ANY iterable, like strings
