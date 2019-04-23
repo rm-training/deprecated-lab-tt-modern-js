@@ -17,7 +17,7 @@ ryan.sayHello();
 // @todo - what happens if we run some asynchronous code?
 // which, remember, can be run in another context...
 Human.prototype.sayHelloLater = function () {
-  setTimeout(function () {
+  setTimeout(() => {
     this.sayHello();
   }, 1000);
 
