@@ -8,15 +8,12 @@ function asyncCall(returnValue, delayMs) {
   });
 }
 
-// We might chain together many promises like so
-function doStuff() {
-  return asyncCall(10, 100).then(function (result) {
-    return asyncCall(result + 10, 100);
-  }).then(function (result) {
-    return asyncCall(result + 10, 100);
-  }).then(function (result) {
-    return asyncCall(result + 10, 100);
-  });
+async function doStuff() {
+  let result = await asyncCall(10, 100);
+  result = await asyncCall(result + 10, 100);
+  result = await asyncCall(result + 10, 100);
+  result = await asyncCall(result + 10, 100);
+  return result;
 }
 
 doStuff().then((result) => console.log(result));
