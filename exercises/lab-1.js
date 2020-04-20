@@ -12,57 +12,49 @@
 let thing1 = 'apple';
 let thing2 = 'banana';
 
-// ...solution goes here...
-
-console.assert(thing2 === 'apple', 'Thing2 should now reference the original value of thing1');
-console.assert(thing1 === 'banana', 'Thing1 should now reference the original value of thing2');
+// @todo solution goes here...
 
 // Exercise 2
 //
-// Given an object, in one line, assign the keys as variables that reference their corresponding values within the object
+// Given an object, in one line, assign the keys as variables 
+// that reference their corresponding values within the object
+//
 // console.log(name) => 'elvis'
 // console.log(title) => 'hip swinger'
 const elvis = { name: 'elvis', title: 'hip swinger' }
 
-// ...solution goes here...
-
-console.assert(name === elvis.name);
-console.assert(title === elvis.title);
+// @todo solution goes here...
 
 // Exercise 3
 //
-// Now, in one line, assign variables to the values of the object using DIFFERENT names than the keys already in the object.
+// Now, in one line, assign variables to the values of the 
+// object using DIFFERENT variable names (person, job) than the keys already in the object
+//
 // console.log(person) => 'elvis'
 // console.log(job) => 'hip swinger'
 
-// ...solution goes here...
-
-console.assert(person === elvis.name);
-console.assert(job === elvis.title);
+// @todo ...solution goes here...
 
 // Exercise 4
 //
-// Concatenate the following arrays into ONE array using es6:
-// console.log(newArray) => [ 1, 2, 3, 'a', 'b', 'c', 'bacon', 'mango', 'pecan pie' ]
+// Concatenate the following arrays into ONE array named 'newArray':
+//   console.log(newArray) => [ 1, 2, 3, 'a', 'b', 'c', 'bacon', 'mango', 'pecan pie' ]
 
 const numbers = [1, 2, 3]
 const letters = ['a', 'b', 'c']
 const foods = ['bacon', 'mango', 'pecan pie']
 
-// ... solution goes here ...
-
-console.assert(newArray.length === 9);
+// @todo ... solution goes here ...
 
 // Exercise 5
 //
-// Split the following string into an array using es6:
-// console.log(wordArray) => [ 'm', 'c', 'G', 'o', 'o' ]
+// Split the following string into an array using es6,
+// so this this works:
+// 	console.log(wordArray) => [ 'm', 'c', 'G', 'o', 'o' ]
 
 const someWord = 'mcGoo'
 
-// ...solution goes here...
-
-console.assert(JSON.stringify(wordArray) === JSON.stringify(['m', 'c', 'G', 'o', 'o']));
+// @todo ...solution goes here...
 
 // Exercise 6
 //
@@ -71,6 +63,33 @@ function sayHello(name) {
 	return 'Hello, ' + name;
 }
 
-// ...solution goes here...
 
-console.assert(sayHello('natalie') === 'Hello, natalie');
+// don't edit me..
+module.exports = {
+	one: {
+	  thing1,
+	  thing2,
+	},
+	two: {
+	  name,
+	  title,
+	  elvis,
+	},
+	three: {
+	  person,
+	  job,
+	  elvis,
+	},
+	four: {
+	  newArray,
+	},
+	five: {
+	  wordArray,
+	},
+	six: {
+	  sayHello,
+	},
+  };
+  
+  return;
+  
