@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jasmine",
     "with-modules": "node -r esm",
-    "lab-1": "node ./exercises/lab-1.js"
+    "lab-1": "node ./exercises/lab-1.js",
+    "lab-2": "node ./exercises/lab-2.js"
   },
   "author": "Ryan Morris",
   "license": "ISC",
