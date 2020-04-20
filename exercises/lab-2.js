@@ -40,12 +40,6 @@ Rectangle.prototype.changeWidth = function (width) {
   this.height = width;
 }
 
-// tests...
-const shapeThing = new Shape(4, 50, 50);
-const squareThing = new Rectangle(5, 12, 15, 30);
-console.assert(shapeThing instanceof Shape);
-console.assert(squareThing instanceof Rectangle);
-
 // Exercise 8
 //
 // There is an additional method on all shapes
@@ -60,9 +54,13 @@ Shape.prototype.moveLater = function (x, y, ms) {
   }.bind(this), ms);
 }
 
-// tests...
-console.assert(typeof shapeThing.moveLater === 'function');
-shapeThing.moveLater(100, 100, 1);
-setTimeout(function () {
-  console.assert(shapeThing.x === 100 && shapeThing.y === 100);
-}, 3);
+// example usage
+// shapeThing.moveLater(100, 100, 1);
+// setTimeout(function () {
+//   console.assert(shapeThing.x === 100 && shapeThing.y === 100);
+// }, 3);
+
+module.exports = {
+  Shape,
+  Rectangle
+}

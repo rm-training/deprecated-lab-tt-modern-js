@@ -36,26 +36,19 @@ class Rectangle extends Shape {
 
 }
 
-const shapeThing = new Shape(4, 50, 50);
-const squareThing = new Rectangle(5, 12, 15, 30);
-
-console.assert(shapeThing instanceof Shape);
-console.assert(squareThing instanceof Rectangle);
 
 // Exercise 8
 //
 // There is an additional method on all shapes
 // Make sure this is added into your class definition (above)
 // And modify it so that it doesn't need to use 'bind', 'call' or retain context
-
 Shape.prototype.moveLater = function (x, y, ms) {
   setTimeout(function () {
     this.move(x, y);
   }.bind(this), ms);
 }
 
-console.assert(typeof shapeThing.moveLater === 'function');
-shapeThing.moveLater(100, 100, 1);
-setTimeout(function () {
-  console.assert(shapeThing.x === 100 && shapeThing.y === 100);
-}, 3);
+module.exports = {
+  Shape,
+  Rectangle
+}
